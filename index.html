@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KlarZen Gebäudereinigung</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <style>
+      body {
+        background: #fff;
+        font-family: system-ui, sans-serif;
+      }
+      main, nav, footer {
+        max-width: 1200px;
+        margin: auto;
+        padding: 1rem;
+      }
+      nav ul li strong {
+        font-size: 1.2rem;
+        color: #1c2b3a;
+      }
+      .nav-right a[role="button"] {
+        background-color: #2a66f5;
+        color: #fff;
+      }
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+      .hero-text {
+        flex: 1;
+      }
+      .hero-image {
+        flex: 1;
+      }
+      .hero-image img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .services {
+        text-align: center;
+        padding: 2rem 0;
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .service-card img {
+        width: 100%;
+        border-radius: 8px;
+        height: auto;
+      }
+      .contact-section {
+        text-align: center;
+        padding: 3rem 0;
+      }
+      .contact-section input[type="email"] {
+        max-width: 300px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container-fluid">
+      <ul>
+        <li><strong>KlarZen</strong><br />Gebäudereinigung</li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="#">Startseite</a></li>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="#kontakt" role="button">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Gebäudereinigung in Augsburg</h2>
+          <p>Professionelle Reinigungsdienste für Ihr Gebäude</p>
+          <a href="#services" role="button">Mehr erfahren</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://via.placeholder.com/500x400?text=Treppenhausreinigung" alt="Reinigungskraft im Treppenhaus" />
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <h3>Unsere Leistungen</h3>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="https://via.placeholder.com/400x250?text=Treppenhausreinigung" alt="Treppenhausreinigung" />
+            <h4>Treppenhausreinigung</h4>
+            <p>Saubere Aufgänge und gepflegte Treppenhäuser für Ihre Immobilien.</p>
+          </div>
+          <div class="service-card">
+            <img src="https://via.placeholder.com/400x250?text=Unterhaltsreinigung" alt="Unterhaltsreinigung" />
+            <h4>Unterhaltsreinigung</h4>
+            <p>Zuverlässige, regelmäßige Reinigungsdienste für Büro, Praxis & Co.</p>
+          </div>
+          <div class="service-card">
+            <img src="https://via.placeholder.com/400x250?text=Fensterreinigung" alt="Fensterreinigung" />
+            <h4>Fensterreinigung</h4>
+            <p>Streifenfreier Durchblick – für Fenster, Glasfassaden & mehr.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="kontakt">
+        <h2>Kontaktieren Sie uns</h2>
+        <form class="grid" style="max-width: 400px; margin: auto;">
+          <input type="email" placeholder="E-Mail-Adresse" aria-label="E-Mail" required />
+          <button type="submit" onclick="event.preventDefault()">Senden</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="container">
+      <small><a href="#">Impressum</a> • <a href="#">Datenschutz</a></small>
+    </footer>
+  </body>
+</html>
